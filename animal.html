@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Pet | Patinhas do Bem</title>
+    <link rel="stylesheet" href="cadastro-pet.css">
+    <script src="cadastro-pet.js" defer></script>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="home-cabecalho">
+        <a href="index.html" class="home-marca">
+            <img src="imagens/logo.jpeg" alt="Logo Patinhas do Bem">
+            <div>
+                <h1>Patinhas do Bem</h1>
+                <p>Amor, cuidado e proteção animal</p>
+            </div>
+        </a>
+
+        <nav class="menu">
+            <a href="index.html">Sobre Nós</a>
+            <a href="pets.html">Conheça Nossos Pets</a>
+            <a href="animal.html">Cadastrar Pet</a>
+            <a href="cadastro.html">Seja um de Nós</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="introducao">
+            <h1>Cadastro de Pet</h1>
+            <p>Ajude um animal a encontrar um novo lar. Preencha os dados abaixo para cadastrar um pet para adoção.</p>
+        </section>
+
+        <section class="formulario-container">
+            <form id="formPet">
+
+                <div class="linha">
+                    <div class="campo">
+                        <label for="nome">Nome do animal:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="idade">Idade:</label>
+                        <input type="number" id="idade" name="idade" min="0" required>
+                    </div>
+                </div>
+
+                <div class="linha">
+                    <div class="campo">
+                        <label for="tipo">Tipo de animal:</label>
+                        <select id="tipo" name="tipo" required>
+                            <option value="">Selecione</option>
+                            <option value="Cachorro">Cachorro</option>
+                            <option value="Gato">Gato</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="porte">Porte:</label>
+                        <select id="porte" name="porte" required>
+                            <option value="">Selecione</option>
+                            <option value="Pequeno">Pequeno</option>
+                            <option value="Médio">Médio</option>
+                            <option value="Grande">Grande</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="descricao">Conte um pouco sobre o animal:</label>
+                    <textarea id="descricao" name="descricao" required></textarea>
+                </div>
+
+                <div class="campo foto-pet">
+                    <label for="foto">Foto do animal:</label>
+                    <input type="file" id="foto" name="foto" accept="image/*">
+                    <img id="preview" alt="Pré-visualização da foto" hidden>
+                </div>
+
+                <button type="submit">Cadastrar pet</button>
+
+                <p id="mensagem"></p>
+
+            </form>
+        </section>
+
+        <!-- ÁREA DE EMERGÊNCIA -->
+        <section class="emergencia">
+            <div class="emergencia-conteudo">
+
+                <div class="emergencia-texto">
+                    <span class="selo-emergencia">ATENDIMENTO PRIORITÁRIO</span>
+
+                    <h2>Precisa de ajuda urgente?</h2>
+
+                    <p>
+                        Encontrou um animal ferido, abandonado ou em situação
+                        de risco? Conte para nós o que está acontecendo.
+                        Nossa equipe poderá avaliar a situação e buscar a
+                        melhor forma de ajudar.
+                    </p>
+
+                    <p class="orientacao-emergencia">
+                        <strong>Importante:</strong> informe o local exato onde
+                        o animal está e descreva a situação com o máximo de detalhes.
+                    </p>
+                </div>
+
+                <div class="emergencia-formulario">
+                    <h3>Solicitar ajuda</h3>
+
+                    <form id="formEmergencia">
+
+                        <div class="campo-emergencia">
+                            <label for="nomeResponsavel">Seu nome:</label>
+                            <input type="text" id="nomeResponsavel" placeholder="Digite seu nome" required>
+                        </div>
+
+                        <div class="campo-emergencia">
+                            <label for="telefoneEmergencia">Telefone para contato:</label>
+                            <input type="tel" id="telefoneEmergencia" placeholder="(11) 99999-9999" required>
+                        </div>
+
+                        <div class="campo-emergencia">
+                            <label for="localAnimal">Onde o animal está?</label>
+                            <input type="text" id="localAnimal" placeholder="Rua, número, bairro e cidade" required>
+                        </div>
+
+                        <div class="campo-emergencia">
+                            <label for="situacaoAnimal">Qual é a situação?</label>
+                            <select id="situacaoAnimal" required>
+                                <option value="">Selecione uma opção</option>
+                                <option value="Animal ferido">Animal ferido</option>
+                                <option value="Animal abandonado">Animal abandonado</option>
+                                <option value="Animal em situação de risco">Animal em situação de risco</option>
+                                <option value="Animal preso ou impossibilitado de sair">Animal preso ou impossibilitado de sair</option>
+                                <option value="Outra situação">Outra situação</option>
+                            </select>
+                        </div>
+
+                        <div class="campo-emergencia">
+                            <label for="descricaoEmergencia">Descreva o que aconteceu:</label>
+                            <textarea id="descricaoEmergencia" placeholder="Conte os detalhes da situação..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="botao-emergencia">Solicitar ajuda urgente</button>
+
+                        <p id="mensagemEmergencia" role="status"></p>
+
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="home-rodape">
+        <h2>Patinhas do Bem 🐾</h2>
+        <p>Resgatando vidas, espalhando amor!</p>
+        <p>
+            &copy; <span id="anoAtual"></span> Patinhas do Bem.
+            Projeto acadêmico de proteção animal.
+        </p>
+    </footer>
+
+</body>
+</html>

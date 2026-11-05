@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seja um de Nós | Patinhas do Bem</title>
+    <link rel="stylesheet" href="cadastro-pet.css">
+    <script src="cadastro-pet.js" defer></script>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="home-cabecalho">
+        <a href="index.html" class="home-marca">
+            <img src="imagens/logo.jpeg" alt="Logo Patinhas do Bem">
+            <div>
+                <h1>Patinhas do Bem</h1>
+                <p>Amor, cuidado e proteção animal</p>
+            </div>
+        </a>
+
+        <nav class="menu">
+            <a href="index.html">Sobre Nós</a>
+            <a href="pets.html">Conheça Nossos Pets</a>
+            <a href="animal.html">Cadastrar Pet</a>
+            <a href="cadastro.html">Seja um de Nós</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="apresentacao">
+            <h2>Seja um de Nós! 💚</h2>
+            <p>
+                Faça parte da Patinhas do Bem e ajude a transformar a vida de animais que precisam de carinho,
+                proteção e uma nova oportunidade. Estamos sempre em busca de pessoas que queiram
+                fazer a diferença, seja ajudando nos cuidados com os animais, participando de resgates,
+                auxiliando nas feiras de adoção ou contribuindo com nossas atividades.
+                Não é necessário ter experiência, apenas vontade de ajudar e amor pelos animais.
+                Junte-se a nós! Cada pessoa que se voluntaria representa mais esperança para um animal que
+                precisa de um lar e de uma vida melhor.
+                Preencha seu cadastro e venha fazer parte dessa causa. 🐾
+            </p>
+        </section>
+
+        <section class="formulario-section">
+
+            <div class="titulo-section">
+                <h2>Cadastro de Voluntário</h2>
+                <p>Preencha seus dados para fazer parte da nossa ONG.</p>
+            </div>
+
+            <form id="form-cadastro">
+
+                <div class="grupo-formulario">
+                    <h3>Seus dados</h3>
+
+                    <div class="campo">
+                        <label for="nome">Nome completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefone">Telefone:</label>
+                        <input type="tel" id="telefone" name="telefone" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="idade">Idade:</label>
+                        <input type="number" id="idade" name="idade" min="16" required>
+                    </div>
+                </div>
+
+                <div class="grupo-formulario">
+                    <h3>Como deseja ajudar?</h3>
+
+                    <div class="campo">
+                        <label for="ajuda">Escolha uma opção:</label>
+                        <select id="ajuda" name="ajuda" required>
+                            <option value="">Selecione</option>
+                            <option value="Voluntariado">Ser voluntário</option>
+                            <option value="Lar temporário">Oferecer lar temporário</option>
+                            <option value="Doação">Fazer doações</option>
+                            <option value="Divulgação">Ajudar na divulgação</option>
+                        </select>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensagem">Conte um pouco sobre você:</label>
+                        <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+                    </div>
+                </div>
+
+                <p id="mensagem-cadastro"></p>
+
+                <button type="submit" class="btn-enviar">Enviar cadastro</button>
+
+            </form>
+
+            <!-- DOAÇÃO -->
+            <section class="secao-doacao">
+
+                <div class="doacao-cabecalho">
+                    <span class="icone-doacao">💚</span>
+                    <h2>Ajude a transformar vidas!</h2>
+                    <p>
+                        Sua doação ajuda a ONG Patinhas do Bem a oferecer
+                        alimentação, cuidados veterinários e muito carinho
+                        aos animais resgatados.
+                    </p>
+                </div>
+
+                <div class="card-doacao">
+
+                    <h3>Escolha o valor da sua contribuição</h3>
+                    <p class="texto-apoio">Qualquer valor faz a diferença!</p>
+
+                    <div class="valores-doacao">
+                        <button type="button" class="valor-btn" data-valor="10">R$ 10</button>
+                        <button type="button" class="valor-btn" data-valor="20">R$ 20</button>
+                        <button type="button" class="valor-btn selecionado" data-valor="30">R$ 30</button>
+                        <button type="button" class="valor-btn" data-valor="50">R$ 50</button>
+                        <button type="button" class="valor-btn" data-valor="100">R$ 100</button>
+                    </div>
+
+                    <div class="outro-valor">
+                        <label for="valorPersonalizado">Ou escolha outro valor:</label>
+                        <div class="campo-valor">
+                            <span>R$</span>
+                            <input type="number" id="valorPersonalizado" placeholder="Digite o valor" min="1" step="0.01">
+                        </div>
+                    </div>
+
+                    <div class="pix-area">
+                        <div class="pix-titulo">
+                            <span>✦</span>
+                            <h3>Doe pelo Pix</h3>
+                        </div>
+
+                        <p><strong>Chave Pix: <span id="chavePix">ongpatinhas@gmail.com</span></strong></p>
+
+                        <div class="chave-pix">
+                            <button type="button" id="copiarPix">Copiar Pix</button>
+                        </div>
+
+                        <p id="mensagemPix"></p>
+                    </div>
+
+                    <div class="mensagem-final-doacao">
+                        <span>🐾</span>
+                        <p>
+                            Cada contribuição representa uma nova chance
+                            de vida para um animalzinho!
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="home-rodape">
+        <h2>Patinhas do Bem 🐾</h2>
+        <p>Resgatando vidas, espalhando amor!</p>
+        <p>
+            &copy; <span id="anoAtual"></span> Patinhas do Bem.
+            Projeto acadêmico de proteção animal.
+        </p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,1116 @@
+/* ==========================================
+   BASE
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --verde: #246b45;
+    --verde-escuro: #174b30;
+    --verde-claro: #e5f4e9;
+    --fundo: #f7faf7;
+    --branco: #ffffff;
+    --texto: #26382d;
+    --cinza: #66756a;
+    --borda: #dce8df;
+    --sombra: 0 8px 25px rgba(23, 75, 48, 0.08);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    color: #354b3a;
+    line-height: 1.6;
+}
+
+.home-pagina {
+    background: #ffffff;
+    color: #34483a;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    width: min(1100px, 90%);
+    margin: 45px auto;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: #39804f;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #28643b;
+}
+
+
+/* ==========================================
+   CABEÇALHO E MENU
+========================================== */
+
+.home-cabecalho {
+    min-height: 95px;
+    padding: 15px 7%;
+    background: #f4f8f3;
+    border-bottom: 1px solid #d7e7d9;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.home-marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #285b39;
+}
+
+.home-marca img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.home-marca h1 {
+    font-size: 21px;
+    margin-bottom: 4px;
+}
+
+.home-marca p {
+    font-size: 11px;
+    color: #758477;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.menu a {
+    color: var(--verde-escuro);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    background: var(--verde);
+    color: var(--branco);
+}
+
+
+/* ==========================================
+   HOME - DESTAQUE
+========================================== */
+
+.home-destaque {
+    min-height: 490px;
+    padding: 65px 9%;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 55px;
+    background: #f1f7f0;
+}
+
+.home-destaque-conteudo {
+    max-width: 530px;
+}
+
+.home-etiqueta {
+    color: #52815c;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.home-destaque-conteudo h2 {
+    color: #285b39;
+    font-size: 43px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.home-destaque-conteudo p {
+    color: #69796c;
+    font-size: 15px;
+    line-height: 1.8;
+    max-width: 490px;
+}
+
+.home-botoes-destaque {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 30px;
+}
+
+.home-botao-principal,
+.home-botao-secundario {
+    padding: 14px 21px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.home-botao-principal {
+    background: #39794b;
+    color: #ffffff;
+}
+
+.home-botao-principal:hover {
+    background: #285b39;
+}
+
+.home-botao-secundario {
+    border: 1px solid #39794b;
+    color: #39794b;
+}
+
+.home-botao-secundario:hover {
+    background: #e3eee3;
+}
+
+.home-destaque-imagem {
+    height: 350px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.home-destaque-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ==========================================
+   HOME - TÍTULOS DE SEÇÃO
+========================================== */
+
+.home-titulo-secao {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 45px;
+}
+
+.home-titulo-secao span {
+    color: #54845f;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.8px;
+}
+
+.home-titulo-secao h2 {
+    color: #285b39;
+    font-size: 31px;
+    margin: 12px 0;
+}
+
+.home-titulo-secao p {
+    color: #758177;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   HOME - QUEM SOMOS
+========================================== */
+
+.home-quem-somos {
+    padding: 85px 9%;
+}
+
+.home-quem-somos-conteudo {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 55px;
+    max-width: 1050px;
+    margin: auto;
+}
+
+.home-quem-somos-imagem {
+    height: 330px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.home-quem-somos-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-quem-somos-texto h3 {
+    color: #285b39;
+    font-size: 23px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.home-quem-somos-texto p {
+    color: #6c796e;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 13px;
+}
+
+
+/* ==========================================
+   HOME - AÇÕES
+========================================== */
+
+.home-servicos {
+    padding: 85px 8%;
+    background: #f5f8f4;
+}
+
+.home-lista-servicos {
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.home-card-servico {
+    background: #ffffff;
+    border-radius: 9px;
+    overflow: hidden;
+    border: 1px solid #e6ece5;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.home-card-servico:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(40, 80, 45, 0.09);
+}
+
+.home-card-servico img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+}
+
+.home-servico-conteudo {
+    padding: 21px;
+}
+
+.home-servico-conteudo h3 {
+    color: #315f3d;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.home-servico-conteudo p {
+    color: #748076;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   HOME - CHAMADA PARA ADOÇÃO
+========================================== */
+
+.home-chamada-adocao {
+    padding: 55px 9%;
+    background: #e8f1e7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.home-chamada-adocao span {
+    color: #52815c;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.home-chamada-adocao h2 {
+    color: #285b39;
+    font-size: 27px;
+    margin: 12px 0;
+}
+
+.home-chamada-adocao p {
+    color: #69796c;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.home-botao-adocao {
+    flex-shrink: 0;
+    padding: 15px 23px;
+    background: #39794b;
+    color: #ffffff;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.home-botao-adocao:hover {
+    background: #285b39;
+}
+
+
+/* ==========================================
+   CADASTRO DE VOLUNTÁRIO
+========================================== */
+
+.apresentacao {
+    background: linear-gradient(135deg, var(--verde-claro), var(--fundo));
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 35px;
+    border: 1px solid var(--borda);
+}
+
+.apresentacao h2,
+.titulo-section h2 {
+    color: var(--verde-escuro);
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.apresentacao p {
+    margin-bottom: 15px;
+    max-width: 850px;
+}
+
+.formulario-section {
+    background: var(--branco);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+}
+
+.titulo-section {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titulo-section p {
+    color: var(--cinza);
+}
+
+.grupo-formulario {
+    border-bottom: 1px solid var(--borda);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.grupo-formulario h3 {
+    color: var(--verde-escuro);
+    font-size: 21px;
+    margin-bottom: 25px;
+}
+
+#mensagem-cadastro {
+    color: green;
+}
+
+.btn-enviar {
+    display: block;
+    padding: 16px;
+    background: var(--verde);
+    border-radius: 12px;
+    font-size: 17px;
+}
+
+.btn-enviar:hover {
+    background: var(--verde-escuro);
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   CAMPOS DE FORMULÁRIO (cadastro de voluntário e de pet)
+========================================== */
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.campo label {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #365b40;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    background: #fcfefc;
+    font-size: 15px;
+    color: var(--texto);
+    font-family: inherit;
+    outline: none;
+    transition: 0.2s;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: var(--verde);
+    box-shadow: 0 0 0 3px rgba(36, 107, 69, 0.10);
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+
+/* ==========================================
+   CADASTRO DE PET
+========================================== */
+
+.introducao {
+    text-align: center;
+    padding: 45px 20px 30px;
+}
+
+.introducao h1 {
+    color: #28643b;
+    margin-bottom: 15px;
+}
+
+.introducao p {
+    color: #68766b;
+    line-height: 1.6;
+}
+
+.formulario-container {
+    background: #ffffff;
+    max-width: 750px;
+    margin: 0 auto 50px;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 5px 25px #00000008;
+}
+
+.linha {
+    display: flex;
+    gap: 20px;
+}
+
+.foto-pet {
+    gap: 12px;
+}
+
+#preview {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+#mensagem {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: green;
+}
+
+
+/* ==========================================
+   LISTA DE PETS
+========================================== */
+
+#pets {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 60px 25px 75px;
+    text-align: center;
+}
+
+#pets h2 {
+    color: #2e6840;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+#pets > p {
+    color: #78847a;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+.lista-animais {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.animal {
+    background: #ffffff;
+    border: 1px solid #e1eae2;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 4px 14px rgba(43, 83, 51, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.animal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 9px 22px rgba(43, 83, 51, 0.12);
+}
+
+.animal img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.animal h3 {
+    color: #326b43;
+    font-size: 21px;
+    margin: 18px 17px 12px;
+}
+
+.animal p {
+    color: #69766b;
+    font-size: 14px;
+    margin: 8px 17px;
+}
+
+.animal p:last-child {
+    margin-bottom: 20px;
+}
+
+
+/* ==========================================
+   DOAÇÃO
+========================================== */
+
+.secao-doacao {
+    padding: 60px 20px;
+    background: #f5faf5;
+    text-align: center;
+}
+
+.doacao-cabecalho {
+    max-width: 650px;
+    margin: 0 auto 35px;
+}
+
+.icone-doacao {
+    font-size: 38px;
+}
+
+.doacao-cabecalho h2 {
+    color: #246b3b;
+    font-size: 30px;
+    margin: 12px 0;
+}
+
+.doacao-cabecalho p {
+    color: #666666;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.card-doacao {
+    max-width: 600px;
+    margin: auto;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(36, 107, 59, 0.10);
+    border: 1px solid #e2eee4;
+}
+
+.card-doacao h3 {
+    color: #285f38;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.texto-apoio {
+    color: #888888;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.valores-doacao {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.valor-btn {
+    padding: 16px 10px;
+    border: 2px solid #dceadd;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #28683d;
+    font-size: 17px;
+}
+
+.valor-btn:hover {
+    border-color: #3b9557;
+    background: #f1f8f2;
+}
+
+.valor-btn.selecionado {
+    background: #2e8548;
+    border-color: #2e8548;
+    color: #ffffff;
+}
+
+.outro-valor {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.outro-valor label {
+    display: block;
+    color: #555555;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.campo-valor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 15px;
+    border: 1px solid #dceadd;
+    border-radius: 10px;
+    background: #fafdfa;
+}
+
+.campo-valor span {
+    color: #28683d;
+    font-weight: bold;
+}
+
+.campo-valor input {
+    width: 100%;
+    padding: 14px 0;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+}
+
+.pix-area {
+    padding: 25px;
+    background: #f1f8f2;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.pix-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.pix-titulo span {
+    color: #2e8548;
+    font-size: 25px;
+}
+
+.pix-titulo h3 {
+    margin: 0;
+}
+
+.pix-area > p {
+    color: #666666;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.chave-pix {
+    display: flex;
+    padding: 10px;
+    background: #ffffff;
+    border: 1px solid #dceadd;
+    border-radius: 12px;
+}
+
+.chave-pix button {
+    padding: 13px 16px;
+    background: #2e8548;
+    border-radius: 9px;
+}
+
+.chave-pix button:hover {
+    background: #205f35;
+}
+
+#mensagemPix {
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.mensagem-final-doacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+    color: #477653;
+    font-size: 14px;
+}
+
+.mensagem-final-doacao span {
+    font-size: 23px;
+}
+
+
+/* ==========================================
+   EMERGÊNCIA
+========================================== */
+
+.emergencia {
+    background: #f1f8f2;
+    padding: 55px 20px;
+    border-top: 1px solid #dcebdd;
+}
+
+.emergencia-conteudo {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.selo-emergencia {
+    color: #478357;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.emergencia-texto h2 {
+    color: #28613b;
+    font-size: 30px;
+    margin: 18px 0;
+}
+
+.emergencia-texto p {
+    color: #5f7062;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.emergencia-texto .orientacao-emergencia {
+    padding: 14px;
+    background: #e5f1e7;
+    border-left: 3px solid #60966c;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.emergencia-formulario {
+    background: #ffffff;
+    padding: 30px;
+    border: 1px solid #dcebdd;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(40, 90, 55, 0.06);
+}
+
+.emergencia-formulario h3 {
+    color: #28613b;
+    font-size: 21px;
+    margin-bottom: 24px;
+}
+
+.campo-emergencia {
+    margin-bottom: 17px;
+}
+
+.campo-emergencia label {
+    display: block;
+    color: #405846;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.campo-emergencia input,
+.campo-emergencia select,
+.campo-emergencia textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d5e4d7;
+    border-radius: 6px;
+    background: #fcfefc;
+    color: #333333;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    outline: none;
+}
+
+.campo-emergencia input:focus,
+.campo-emergencia select:focus,
+.campo-emergencia textarea:focus {
+    border-color: #60966c;
+    background: #ffffff;
+}
+
+.campo-emergencia textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.botao-emergencia {
+    padding: 14px;
+    background: #39794b;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.botao-emergencia:hover {
+    background: #28613b;
+}
+
+#mensagemEmergencia {
+    color: #28613b;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+
+/* ==========================================
+   RODAPÉ
+========================================== */
+
+.home-rodape {
+    background: #285b39;
+    color: #ffffff;
+    padding: 35px 8%;
+    margin-top: 60px;
+    border-top: 1px solid #d7e7d9;
+    text-align: center;
+}
+
+.home-rodape h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.home-rodape p {
+    color: #e1eee2;
+    font-size: 12px;
+    line-height: 1.8;
+    margin: 8px 0 5px;
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media (max-width: 1000px) {
+    .home-cabecalho {
+        flex-direction: column;
+    }
+
+    .home-lista-servicos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 950px) {
+    .lista-animais {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .linha {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .formulario-container {
+        margin: 0 15px 40px;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 750px) {
+    .emergencia-conteudo {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .emergencia-formulario {
+        padding: 22px 17px;
+    }
+
+    .emergencia-texto h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 700px) {
+    main {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    .menu {
+        gap: 7px;
+    }
+
+    .menu a {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+
+    .apresentacao,
+    .formulario-section {
+        padding: 25px 20px;
+    }
+
+    .apresentacao h2,
+    .titulo-section h2 {
+        font-size: 24px;
+    }
+
+    .home-destaque {
+        grid-template-columns: 1fr;
+        padding: 50px 7%;
+        gap: 30px;
+    }
+
+    .home-destaque-conteudo h2 {
+        font-size: 34px;
+    }
+
+    .home-destaque-imagem {
+        height: 280px;
+    }
+
+    .home-quem-somos {
+        padding: 60px 7%;
+    }
+
+    .home-quem-somos-conteudo {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .home-servicos {
+        padding: 60px 7%;
+    }
+
+    .home-chamada-adocao {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 45px 7%;
+    }
+}
+
+@media (max-width: 600px) {
+    .card-doacao {
+        padding: 22px 16px;
+    }
+
+    .doacao-cabecalho h2 {
+        font-size: 24px;
+    }
+
+    .valores-doacao {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    #pets {
+        padding: 40px 18px;
+    }
+
+    #pets h2 {
+        font-size: 26px;
+    }
+
+    .lista-animais {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        margin: auto;
+    }
+
+    .animal img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-lista-servicos {
+        grid-template-columns: 1fr;
+    }
+
+    .home-marca h1 {
+        font-size: 18px;
+    }
+
+    .home-destaque-conteudo h2 {
+        font-size: 30px;
+    }
+
+    .home-titulo-secao h2 {
+        font-size: 26px;
+    }
+
+    .home-botoes-destaque {
+        flex-direction: column;
+    }
+
+    .home-botoes-destaque a {
+        text-align: center;
+    }
+}
